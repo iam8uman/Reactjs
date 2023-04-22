@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="hhh">Hello world! I'm AI. </h1>
+
+
+    <script>
+        // const a=45;
+        // console.log(a);
+
+
+        let a = "my name is suman and i am is the ultimate Winner of this show";
+        console.log(a);
+
+        let apple = true;
+        console.log(typeof (apple));
+
+        function display() {
+            console.warn("This display the wholesome kudos");
+        }
+
+        function display(num) {
+            console.log("the Number is " + num);
+        }
+
+        const obj = {
+            apple: "apple xaina aaile",
+            ball: "ball pani xaina aja voli ",
+            cat: 45,
+            mouse: true
+        }
+
+        console.log(obj);
+
+        const objectFirst = new Object({
+            fname: "Suman",
+            lname: "Sharma"
+        });
+
+        console.warn("My full name is " + objectFirst.fname + ' ' + objectFirst.lname);
+
+
+        function help(num) {
+            console.warn("the number is " + this)
+        }
+
+        // arrow function ko this 
+        let arrowFunction = (num) => {
+            console.log("the number is " + this)
+        }
+
+
+
+
+        // event listener
+        // document.addEventListener("click", function click() {
+        //     const whattodo = confirm("Are You Sure?");
+        //     console.log(whattodo);
+        // })
+
+        document.addEventListener("click", function changeBg() {
+            document.getElementById("hhh").style.backgroundColor = "red";
+        })
+        document.addEventListener("dblclick", function change() {
+            document.getElementById("hhh").style.backgroundColor = "purple";
+        })
+
+
+
+
+
+        // document.body.style.backgroundColor = "red";
+
+
+
+
+
+        // js switch case 
+
+        let day;
+        switch (2) {
+            case 0:
+                console.log("This is sunday");
+                break;
+            case 1:
+                console.log("This is Monday");
+                break;
+            case 2:
+                console.log("This is tuesday");
+                break;
+            case 3:
+                console.log("This is wednesday");
+                break;
+
+            default:
+                break;
+        }
+
+        console.log(new Date().getMilliseconds())
+
+    </script>
+</body>
+
+</html>
