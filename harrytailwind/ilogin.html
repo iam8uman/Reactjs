@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page Neumorphism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .aa{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="aa text-center bg-slate-400 w-auto m-3 p-4 inline-block rounded-lg ">
+        <div class="btn text-center space-x-6">
+            <button class="rounded-md bg-red-600 p-2">Container</button>
+            <button class="rounded-md bg-green-500 py-2 px-3">Driver</button>
+            <button class="rounded-md bg-blue-600 p-2">Nagarik</button>
+        </div>
+            <img src="./idea.jpg" height="180px" style="border-radius: 50%;" class="m-2 border-purple-500 border-2 rounded-2xl" width="180px" alt="" srcset="">
+        <div class="form text-center">
+            <input type="text" name="username" id="username" placeholder="Username" class="p-1 m-2 rounded-md border-purple-600 border-2"> <br>
+            <input type="email" name="email" id="email" placeholder="Email" class="p-1 m-2 rounded-md border-purple-500 border-2"><br>
+            <input type="password" name="password" id="password" placeholder="Password" class="p-1 m-2 rounded-md border-purple-600 border-2"><br>
+        </div>
+        <button type="submit" class="text-center bg-green-600 w-[80%] m-2 p-1.5 rounded-2xl text-slate-100">Login</button>
+        <div class="text-center underline">Don't have any account?</div>
+        <button class="text-center bg-red-600 w-[80%] m-2 p-1.5 rounded-2xl text-slate-100">SignIn</button>
+    </div>
+
+
+
+</body>
+</html>
