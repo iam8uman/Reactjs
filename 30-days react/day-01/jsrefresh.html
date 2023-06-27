@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./external.js"></script>
+    <script src="./multiple.js"></script>
 
     <title>Document</title>
-</head>
-<body>
-    <button class="rounded-full m-5 p-2 bg-red-500" onclick="myfunc()">Click Me</button>
-</body>
+  </head>
+  <body>
+    <button class="rounded-full m-5 p-2 bg-red-500" onclick="myfunc()">
+      Click Me
+    </button>
+  </body>
 
-
-<script>
-
-    function myfunc(){
-        alert("Button Clicked")
+  <script>
+    function myfunc() {
+      alert("Button Clicked");
+      console.log("here button pani clicked vayo ");
+      let emptyarray = Attary();
+      console.log("Empty:", emptyarray);
     }
-</script>
+  </script>
 </html>
