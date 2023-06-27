@@ -5,19 +5,21 @@ import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
 import SearchIcon from "@mui/icons-material/Search";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
+import { theme } from "./theme";
+
 
 function App() {
   // this component wala part does not work i don't know hy
-  const ownButton = styled(Button)({
+  const ownButton = styled((Button)=>({
     background: "secondary",
-    color: "primary",
+    color: "myowncolor",
     border: "2px solid purple",
     margin: "3px",
     "&:hover": {
       background: "purple",
       color: "black",
     },
-  });
+  }));
 
   return (
     <div>
@@ -41,6 +43,7 @@ function App() {
           {" "}
           Alarm
         </Button>
+        <ownButton>Hello</ownButton>
       </Stack>
       {/* There is already an h1 in the page, let's not duplicate it. */}
       <Typography variant="h3" component="p">
