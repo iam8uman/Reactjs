@@ -4,11 +4,9 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
 } from "@mui/material";
 import React, { useState } from "react";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";

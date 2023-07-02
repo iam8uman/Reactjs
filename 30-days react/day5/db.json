@@ -1,0 +1,21 @@
+{
+    "superheros":[
+        {
+            "id":1,
+            "name":"IronMan",
+            "alterego":"tony stark"
+        },
+        {
+            
+            "id":2,
+            "name":"Captain Ameria",
+            "alterego":"Chirs Hemgstrong"
+        },
+        {
+            
+            "id":3,
+            "name":"Wonder Women",
+            "alterego":"Princess Dieana"
+        }
+    ]
+}
