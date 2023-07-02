@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-     <div className="py-2 bg-gray-950 text-yellow-200"> hello world </div>
+     <div className="py-2 font-thin text-lg bg-gray-950 text-yellow-200"> hello world </div>
     </>
   )
 }
