@@ -1,5 +1,6 @@
 import Hookcounter from "./components/Hookcounter"
 import { useState } from "react"
+import Hookcountertwo from "./components/Hookcountertwo"
 
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
 
   return (
     <>
-     <div className="py-2 font-thin text-lg bg-gray-950 text-yellow-200"> hello world </div>
      <Hookcounter/>
+     <Hookcountertwo/>
     </>
   )
 }
