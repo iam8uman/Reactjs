@@ -3,6 +3,8 @@ import { useState } from "react"
 import Hookcountertwo from "./components/Hookcountertwo"
 import Hooknamechange from "./components/Hooknamechange"
 import Hookarray from "./components/Hookarray"
+import ClassOne from "./components/Classcountup"
+import TitlecountUpwithFunc from "./components/TitlecountUpwithFunc"
 
 
 function App() {
@@ -13,7 +15,9 @@ function App() {
      {/* <Hookcounter/> */}
      {/* <Hookcountertwo/> */}
      {/* <Hooknamechange/> */}
-     <Hookarray/>
+     {/* <Hookarray/> */}
+     {/* <ClassOne/> */}
+     <TitlecountUpwithFunc/>
     </>
   )
 }
