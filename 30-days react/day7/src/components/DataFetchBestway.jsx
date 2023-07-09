@@ -45,30 +45,30 @@ import axios from "axios";
 const Datafetchfromapi = () => {
   const [post, setPost] = useState({}); //here useState ma object pass garna parxa. aagadi sabai data ko lagi empty array pass gareko thiyo.
 
-  const [id, setId] = useState(1);
-  const [idButton, setIdButton] = useState(1);
+  const [id, setId] = useState(1); //for input field id
+  const [idButton, setIdButton] = useState(1); //for button clicked id
 
-  const FetchId=()=>{
-    setIdButton(id) //this id from input fields 
-  }
-
-
+  
+  
   useEffect(() => {
-    axios
+      axios
       .get(`https://jsonplaceholder.typicode.com/posts/${idButton}`)
       .then((res) => {
         console.log(res);
         setPost(res.data);
       })
       .catch((err) => {
-        console.log(err);
-      });
-  }, [idButton]);
-
-  const changeId = (e) => {
-    setId(e.target.value);
-  };
-
+          console.log(err);
+        });
+    }, [idButton]);
+    
+    const changeId = (e) => {
+        setId(e.target.value);
+    };
+    
+    const FetchId=()=>{
+      setIdButton(id) //this id from input fields 
+    }
  
   return (
     <> 
@@ -76,7 +76,7 @@ const Datafetchfromapi = () => {
         <div className="button btn-primary m-4 p-4 bg-purple-500 text-center">
           Top news title
         </div>
-        <input type="text" className="text-center " name="" id="" value={id} onChange={changeId} />
+        <input type="text" className="text-center m-4 p-4 border-e-2 border-green-500 " name="" id="" value={id} onChange={changeId} />
         <button type="button" className="bg-black border-2 border-white m-4 p-4 rounded-md" onClick={FetchId}>Fetch title</button>
         <div>{post.title}</div>
       </div>
