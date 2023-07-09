@@ -29,6 +29,7 @@
 
 
 // iamtrying to do same things without watching videos 
+// this is another method to do so using PrevCount
 
 import { useEffect, useState } from 'react'
 
@@ -36,7 +37,7 @@ const EverySecCount = () => {
   const [count,setCount]=useState(0)
 
   const Increase=()=>{
-    setCount(count+1);
+    setCount(PrevCount=>PrevCount+1); //instead of adding dependencies list i.e tala ko tyo array useEffect ma PrevCount add gare ne same kam gardo raixa 
   }
 
   useEffect(()=>{
@@ -45,7 +46,7 @@ const EverySecCount = () => {
       clearInterval(interval)
     }
   
-  },[count])
+  },[])
   return (
 
 
