@@ -1,5 +1,6 @@
 import "./App.css";
-import Datafetching from "./components/Datafetching";
+// import Datafetching from "./components/Datafetching";
+import DataFetchTwo from "./components/DataFetchTwo";
 // import Countreducerhook from './components/Countreducerhook'
 // import CounterTwo from './components/CounterTwo'
 // import React, { useReducer } from "react";
@@ -38,7 +39,8 @@ function App() {
         <ComB />
         <ComD />
       </Context.Provider> */}
-      <Datafetching/>
+      {/* <Datafetching/> */}
+      <DataFetchTwo/>
     </>
   );
 }
