@@ -49,3 +49,4 @@ dispatch method rendors Increment state from reducers method in switch case.
 I just add some text to increase commit now .
 
 Another one too .
+

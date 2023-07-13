@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ### in this file my taregt is to complete all of these 30 days course 
-and t
+and this start from js basic 
