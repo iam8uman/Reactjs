@@ -28,23 +28,18 @@ router.get("/", (req, res) => {
   console.log(users);
 });
 
-
-
-
-// now for creating new user we need to use post method 
+// now for creating new user we need to use post method
 
 router.post("/", (req, res) => {
 
+  const userID = uuidv4();
+  const newUser = req.body;
+  const userWithId = { ...newUser, id: userID }; // create new object & adding id
 
-  const userID=uuidv4()
-  const newUser=req.body;
-  const userWithId={...users,id:userID} // create new object & adding id 
-  
-  users.push(newUser);
+  users.push(userWithId);
   res.send(
     `Post method triggered || form bata data aayo hai so display thi with user ${newUser.fname}`
   );
-  console.log(userWithId);
 });
 
 export default router;
