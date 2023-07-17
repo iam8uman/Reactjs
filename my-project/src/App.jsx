@@ -230,7 +230,6 @@ const App = () => {
         border="2px solid black"
         borderColor="green.500"
         onClick={init}
-        // colorScheme="telegram"
         textAlign="center"
         mb={12}
       >
@@ -238,7 +237,7 @@ const App = () => {
       </Button>
       <Flex justifyContent="center" mb={4}>
         <Box ref={webcamRef} id="webcam-container"></Box>
-      </Flex>
+      </Flex> <br /> <hr />
       <Flex ref={labelContainerRef} id="label-container" flexWrap="wrap">
         {/* Placeholder for labels */}
       </Flex>
