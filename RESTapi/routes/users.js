@@ -8,15 +8,10 @@
 import { v4 as uuidv4 } from "uuid";
 import express from "express";
 
+
+// first consider empty database
 const users = [
-  {
-    fname: "Upasana",
-    lname: "Devkota",
-  },
-  {
-    fname: "Suman",
-    lname: "Sharma",
-  },
+
 ];
 
 const router = express.Router(); // to use router initilizing
@@ -41,5 +36,11 @@ router.post("/", (req, res) => {
     `Post method triggered || form bata data aayo hai so display thi with user ${newUser.fname}`
   );
 });
+
+
+// get users/2 => req.params
+router.get('/:id',(req,res)=>{
+  res.send("id vanne router hit vayo hai gays")
+})
 
 export default router;
