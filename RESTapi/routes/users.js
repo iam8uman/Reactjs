@@ -8,11 +8,8 @@
 import { v4 as uuidv4 } from "uuid";
 import express from "express";
 
-
 // first consider empty database
-const users = [
-
-];
+const users = [];
 
 const router = express.Router(); // to use router initilizing
 
@@ -26,7 +23,6 @@ router.get("/", (req, res) => {
 // now for creating new user we need to use post method
 
 router.post("/", (req, res) => {
-
   const userID = uuidv4();
   const newUser = req.body;
   const userWithId = { ...newUser, id: userID }; // create new object & adding id
@@ -37,10 +33,11 @@ router.post("/", (req, res) => {
   );
 });
 
-
 // get users/2 => req.params
-router.get('/:id',(req,res)=>{
-  res.send("id vanne router hit vayo hai gays")
-})
+router.get("/:id", (req, res) => {
+  const id = req.params;
+  const findUser = users.find((users) => users.id === id);
+  res.send(findUser);
+});
 
 export default router;
