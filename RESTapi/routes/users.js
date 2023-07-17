@@ -5,35 +5,46 @@
 // DELETE users/:id ------ Delete a user
 // PATCH users/:id ------- Update a user
 
+import { v4 as uuidv4 } from "uuid";
 import express from "express";
 
 const users = [
   {
-    userId: 1,
-    id: 2,
-    name: "Upasana Devkota",
-    desc: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+    fname: "Upasana",
+    lname: "Devkota",
   },
   {
-    userId: 2,
-    id: 3,
-    name: "SumanTheProgrammer",
-    desc: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+    fname: "Suman",
+    lname: "Sharma",
   },
 ];
 
 const router = express.Router(); // to use router initilizing
 
 // all routes starting with /users because we already define in the index.js
+
 router.get("/", (req, res) => {
   res.send(users);
-  console.log(users)
+  console.log(users);
 });
 
 
-router.post('/',(req,res)=>{
-    console.log("post method triggered");
-    res.send("Post method triggered || form bata data aayo hai so display this")
-})
+
+
+// now for creating new user we need to use post method 
+
+router.post("/", (req, res) => {
+
+
+  const userID=uuidv4()
+  const newUser=req.body;
+  const userWithId={...users,id:userID} // create new object & adding id 
+  
+  users.push(newUser);
+  res.send(
+    `Post method triggered || form bata data aayo hai so display thi with user ${newUser.fname}`
+  );
+  console.log(userWithId);
+});
 
 export default router;
