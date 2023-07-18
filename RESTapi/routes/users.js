@@ -1,10 +1,3 @@
-// this is user routes where our maint routing happens like this for eg .
-// GET users/ ------------ finds all users
-// POST users/ ----------- Create a user
-// GET users/:id --------- find user's details
-// DELETE users/:id ------ Delete a user
-// PATCH users/:id ------- Update a user
-
 import { v4 as uuidv4 } from "uuid";
 import express from "express";
 
