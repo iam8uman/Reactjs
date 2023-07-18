@@ -1,61 +1,22 @@
-import { v4 as uuidv4 } from "uuid";
 import express from "express";
+import {createNewUser,getUsers,getUserbyId,deleteById, updateById} from '../controllers/users.js'
 
-// first consider empty database
-let users = [];
 
 const router = express.Router(); // to use router initilizing
 
 // all routes starting with /users because we already define in the index.js
-
-router.get("/", (req, res) => {
-  res.send(users);
-  console.log(users);
-});
+router.get("/", getUsers);
 
 // now for creating new user we need to use post method
-
-router.post("/", (req, res) => {
-  const userID = uuidv4();
-  const newUser = req.body;
-  const userWithId = { ...newUser, id: userID }; // create new object & adding id
-
-  users.push(userWithId);
-  res.send(
-    `Post method triggered || form bata data aayo hai so display thi with user ${newUser.fname}`
-  );
-});
+router.post("/", createNewUser);
 
 // get users/2 => req.params
-router.get("/:id", (req, res) => {
-  const { id } = req.params;
-  const findUser = users.find((user) => user.id === id);
-  res.send(findUser);
-});
+router.get("/:id", getUserbyId);
 
 //delete the user specified by id
-router.delete("/:idd", (req, res) => {
-  const idToDelete = req.params.idd;
-  users = users.filter((user) => user.id !== idToDelete); // filter function le jaba false return garxa taba item delete hunxa
-  res.send(users);
-});
+router.delete("/:idd", deleteById);
 
 // update the user details
-router.patch("/:idd", (req, res) => {
-  const idToUpdate = req.params.idd;
-
-  // now find that user details with that id
-
-  const userToUpdate = users.find((user) => user.id === idToUpdate);
-
-  const { fname, lname } = req.body;
-
-  if (fname) userToUpdate.fname = fname;
-
-  if (lname) userToUpdate.lname = lname;
-
-  // res.send("User Update ")
-  res.send(users)
-});
+router.patch("/:idd", updateById);
 
 export default router;
