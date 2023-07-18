@@ -41,11 +41,28 @@ router.get("/:id", (req, res) => {
 });
 
 //delete the user specified by id
-router.delete('/:idd',(req,res)=>{
+router.delete("/:idd", (req, res) => {
   const idToDelete = req.params.idd;
-  users=users.filter((user)=>user.id!==idToDelete) // filter function le jaba false return garxa taba item delete hunxa
-  res.send(users)
+  users = users.filter((user) => user.id !== idToDelete); // filter function le jaba false return garxa taba item delete hunxa
+  res.send(users);
+});
 
-})
+// update the user details
+router.patch("/:idd", (req, res) => {
+  const idToUpdate = req.params.idd;
+
+  // now find that user details with that id
+
+  const userToUpdate = users.find((user) => user.id === idToUpdate);
+
+  const { fname, lname } = req.body;
+
+  if (fname) userToUpdate.fname = fname;
+
+  if (lname) userToUpdate.lname = lname;
+
+  // res.send("User Update ")
+  res.send(users)
+});
 
 export default router;
