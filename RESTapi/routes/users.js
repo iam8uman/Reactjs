@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import express from "express";
 
 // first consider empty database
-const users = [];
+let users = [];
 
 const router = express.Router(); // to use router initilizing
 
@@ -39,5 +39,13 @@ router.get("/:id", (req, res) => {
   const findUser = users.find((user) => user.id === id);
   res.send(findUser);
 });
+
+//delete the user specified by id
+router.delete('/:idd',(req,res)=>{
+  const idToDelete = req.params.idd;
+  users=users.filter((user)=>user.id!==idToDelete) // filter function le jaba false return garxa taba item delete hunxa
+  res.send(users)
+
+})
 
 export default router;
