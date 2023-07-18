@@ -35,8 +35,8 @@ router.post("/", (req, res) => {
 
 // get users/2 => req.params
 router.get("/:id", (req, res) => {
-  const id = req.params;
-  const findUser = users.find((users) => users.id === id);
+  const { id } = req.params;
+  const findUser = users.find((user) => user.id === id);
   res.send(findUser);
 });
 

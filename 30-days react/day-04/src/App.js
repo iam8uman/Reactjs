@@ -8,11 +8,12 @@ import Feed from './components/Feed'
 const App = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      {/* <Nav/> */}
-      <Sidebar ></Sidebar>
-      <Feed/>
-      <Rightbar/>
+      <Navbar/>
+     <button><Sidebar/></button> 
+     <br/>
+     <button><Feed/></button> 
+     <br/>
+     <button><Rightbar/></button> 
     </div>
   )
 }
