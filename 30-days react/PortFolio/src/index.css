@@ -1,3 +1,7 @@
+/* google fonts = open sans 400 regular and semibod 600 AND playfair display with same speciality*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&family=Roboto:ital,wght@0,100;0,300;0,500;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
