@@ -14,7 +14,7 @@ const useMediaQuery=(query)=>{
         addEventListener("resize",listener)
 
         return ()=> window.removeEventListener("resize",listener)
-    },[matches,query]) // we all know useEffect takes 2 argument 2n
+    },[matches,query]) // we all know useEffect takes 2 argument 2nd one is array 
 }
 
 export default useMediaQuery
