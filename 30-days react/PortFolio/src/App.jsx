@@ -1,7 +1,13 @@
+import { useState } from "react"
+import useMediaQuery from './hooks/useMediaQuery'
+
+
+
 export default function App() {
+  const [selectedpage,setSelectedpage]=useState("home")
+  const isAboveMediumScreen=useMediaQuery("(min-width:1060px)")
+  
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world! Nepali hahaha
-    </h1>
+    <div className="app bg-deep-blue"></div>
   )
 }
