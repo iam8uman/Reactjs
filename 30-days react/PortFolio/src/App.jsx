@@ -9,8 +9,8 @@ export default function App() {
   return (
     <div className="app bg-deep-blue">
       <Navbar
-      selectedpage={selectedPage}
-      setSelectedpage={setSelectedPage}
+      selectedPage={selectedPage}
+      setSelectedPage={setSelectedPage}
         />
     </div>
   );
