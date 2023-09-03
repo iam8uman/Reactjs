@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Before & after</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        div::before{
-            content: 'hehe';
-            background-color: rgb(174, 255, 0);
-            color: black;
-        }
-        div::after{
-            content: 'haha';
-            background-color: rgb(174, 255, 0);
-            color: black;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card{
+        padding: 3rem;
+        margin: 1rem;
+        background-color: black;
+        outline: purple;
+        width: fit-content;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 16rem;
+        height: 20rem;
+        width: 16rem;
+        border-radius: 12px;
+        position: relative;
 
+      }
+
+      .card::before{
+        content: 'content';
+        object-fit: cover;
+        overflow: hidden;
+        position: absolute;
+        background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); ;
+        transform: translate(-50%,-50%);
+      }
     </style>
+  </head>
+  <body>
+    <div class="card flex justify-center">
+        <div class="letter"></div>
+        Hello KtaKti ho k xa halkhabar!
 
-</head>
-<body>
-    
-
-
-</body>
+    </div>
+  </body>
 </html>
