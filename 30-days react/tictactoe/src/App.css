@@ -1,0 +1,7 @@
+/* image ko avatar css  */
+
+.avatar{
+  border-radius: 50%;
+  height: 200px;
+  background-color: white;
+}
