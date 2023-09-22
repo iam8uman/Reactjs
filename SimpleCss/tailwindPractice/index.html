@@ -41,24 +41,42 @@
         padding-right: 2rem;
         padding-top: 1rem;
       }
-      ul li a:hover::before{
-        content: '';
+      ul li a:hover::before {
+        content: "";
         position: absolute;
         bottom: 0;
-        
       }
-      ul li a:hover::after{
+      ul li a:hover::after {
         text-decoration: underline;
         transition-duration: 2ms;
       }
-      .link , .mainbody {
+      .link,
+      .mainbody,
+      .heading {
         position: relative;
         color: white;
       }
-      /* .mainbody{
-        height: 60vh;
+      .option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        border-radius: 23px;
+        text-align: center;
+      }
+      .box h1 {
+        font-size: x-large;
+        font-weight: 700;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        text-decoration: underline;
+      }
+      .productpart{
+        height: auto;
         width: 100%;
-      } */
+        background-color: black;
+      }
     </style>
   </head>
   <body>
@@ -69,31 +87,107 @@
         </div>
         <div class="link">
           <ul class="flex justify-around">
-            <li><a href="#" class="text-lg ">Home</a></li>
+            <li><a href="#" class="text-lg">Home</a></li>
             <li><a href="#" class="text-lg">Feature</a></li>
             <li><a href="#" class="text-lg">Reviews</a></li>
             <li><a href="#" class="text-lg">About</a></li>
-            <li><a href="#" class="text-lg"><i class="fa-solid fa-user-plus"></i></a></li>
-            <li><a href="#" class="text-lg"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="#" class="text-lg"><i class="fa-solid fa-magnifying-glass-dollar fa-beat-fade"></i></a></li>
+            <li>
+              <a href="#" class="text-lg"
+                ><i class="fa-solid fa-user-plus"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="text-lg"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="text-lg"
+                ><i class="fa-solid fa-magnifying-glass-dollar fa-beat-fade"></i
+              ></a>
+            </li>
           </ul>
         </div>
       </div>
-       <!-- navbar comple  -->
-      <div class="mainbody flex  justify-around top-24  ">
+      <!-- navbar comple  -->
+      <div
+        class="mainbody flex flex-wrap justify-around top-24 pb-60 md:flex-shrink"
+      >
         <div class="textpart w-1/2 pl-8">
-            <h1 class="heading text-5xl mx-2 my-4">Audio Enhanced <span class="text-orange-500 font-semibold">HeadPhone</span> 23.03 || Grab it Now!!!</h1>
-            <hr>
-            <p class="desc my-6 font-sans text-1xl">This is the most optimal and useful headphone available in the market right now! So you can just book it and it is open for  everyoneand it is open for  everyoneand it is open for  everyoneand it is open for  everyoneand it is open for  everyoneand it is open for  everyone now and it is open for  everyone!</p>
-            <div class="socials ">
-                <ul class="flex text-2xl">
-                    <li><a href=""><i class="fa-brands fa-facebook fa-fade"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-twitter "></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-instagram fa-fade"></i></a></li>
-                </ul>
-            </div>
+          <h1 class="heading text-5xl mx-2 my-4">
+            Audio Enhanced
+            <span class="text-orange-500 font-semibold">HeadPhone</span> 23.03
+            || Grab it Now!!!
+          </h1>
+          <hr />
+          <p class="desc my-6 font-sans text-1xl">
+            This is the most optimal and useful headphone available in the
+            market right now! So you can just book it and it is open for
+            everyoneand it is open for everyoneand it is open for everyoneand it
+            is open for everyoneand it is open for everyoneand it is open for
+            everyone now and it is open for everyone!
+          </p>
+          <div class="socials">
+            <ul class="flex text-2xl">
+              <li>
+                <a href=""><i class="fa-brands fa-facebook fa-fade"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram fa-fade"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="imgpart  "><img src="./Audioplay/assets/bg.jpg" class="w-4/3 h-96 rounded-3xl outline-dotted" alt="" srcset=""></div>
+        <div class="imgpart">
+          <img
+            src="./Audioplay/assets/bg.jpg"
+            class="w-4/3 h-96 rounded-3xl outline-dotted"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <hr />
+      <div class="productpart">
+        <h1
+          class="heading text-center text-orange-600 font-bold text-3xl md:text-4xl lg:text-5xl"
+        >
+          Product Specification!!!
+        </h1>
+      </div>
+      <!-- Main page complete here  -->
+      <div
+        class="option m-10 text-black flex flex-wrap md:flex-row lg:flex-row-reverse"
+      >
+        <div class="box m-7 p-7 h-60 w-60 bg-white">
+          <h1>Headphone 1.1</h1>
+          <i class="fa-solid fa-headphones fa-beat text-3xl"></i>
+          <p class="py-3">This is the first version of headphone!</p>
+        </div>
+        <div class="box m-7 p-7 h-60 w-60 bg-yellow-50">
+          <h1>Headphone 2.2</h1>
+          <i class="fa-sharp fa-solid fa-signal fa-beat text-3xl"></i>
+          <p class="py-3">2nd version of Headphone is nt</p>
+        </div>
+        <div class="box m-7 p-7 h-60 w-60 bg-yellow-50">
+          <h1>Headphone 2.2</h1>
+          <i class="fa-sharp fa-solid fa-signal fa-beat text-3xl"></i>
+
+          <p class="py-3">2nd version of Headphone is now</p>
+        </div>
+        <div class="box m-7 p-7 h-60 w-60 bg-yellow-50">
+          <h1>Headphone 2.2</h1>
+          <i class="fa-solid fa-alarm-clock fa-beat text-3xl"></i>
+          <p class="py-3">2nd version of Headphone is now on the market</p>
+        </div>
+
+        <div class="box m-7 p-7 h-60 w-60 bg-yellow-100">
+          <h1>I-pad 3.2</h1>
+        </div>
+        <div class="box m-7 p-7 h-60 w-60 bg-white"><h1>Laptop 3.3</h1></div>
       </div>
     </div>
   </body>
