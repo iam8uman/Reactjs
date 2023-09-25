@@ -1,10 +1,11 @@
 // import React from 'react'
 import logo from '../assets/logo.png'
+import Home from './Home'
 
-const Home = () => {
+const Profile = () => {
   return (
     <>
-        <div className="text-4xl text-center bg-slate-700 text-white p-3">Profile Section</div>
+        {/* <div className="text-4xl text-center bg-slate-700 text-white p-3">Profile Section</div> */}
 
 
     <div className={`main  p-3  bg-slate-800 flex flex-row-reverse  `}>
@@ -18,9 +19,10 @@ const Home = () => {
         <img src={logo}  className='rounded-md max-w-full h-auto  border-2 border-white-700'  alt=""/>
       </div>
     </div>
+    <Home />
       
     </>
   )
 }
 
-export default Home
+export default Profile
