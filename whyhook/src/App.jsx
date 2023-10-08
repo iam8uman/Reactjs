@@ -1,30 +1,30 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Card from "./component/Card";
 
 function App() {
-  const [value,setValue]=useState(0);
+  // const [value,setValue]=useState(0);
 
-  const addValue = () => {
-    setValue(value+1);
-    if(value>20)
-    {
-      alert("Value is greater than 20");
-      setValue(20);
-      return;
-    }
-    console.log("value added "+value);
-  }
+  // const addValue = () => {
+  //   setValue(value+1);
+  //   if(value>20)
+  //   {
+  //     alert("Value is greater than 20");
+  //     setValue(20);
+  //     return;
+  //   }
+  //   console.log("value added "+value);
+  // }
 
-  const subValue = () => {
-    if(value<0)
-    {
-      alert("Value is less than 0");
-      setValue(0);
-      return;
-    }
-    setValue(value-1);
-    console.log("value sub "+value);
-  }
+  // const subValue = () => {
+  //   if(value<0)
+  //   {
+  //     alert("Value is less than 0");
+  //     setValue(0);
+  //     return;
+  //   }
+  //   setValue(value-1);
+  //   console.log("value sub "+value);
+  // }
   return (
     <>
       {/* <div className="mainContainer flex text-white flex-col w-80 rounded-md bg-purple-900">
@@ -37,7 +37,7 @@ function App() {
         <button className="btn outline-dotted outline-red-400 text-2xl m-4 rounded-md" onClick={subValue}>Decrease</button>
       </div> */}
       {/* componet card  */}
-      <Card name={"Suman"} about={"suman ko kam xaina hai "} what={"nothing"} />
+      <Card name={"Suman"} about={"suman ko kam xaina hai "}  />
       <Card name={"Upasana Devkota"} about={"I can't be more beautiful than thissss"} what={"Love me"} />
     </>
   );
