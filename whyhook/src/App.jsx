@@ -1,13 +1,27 @@
+import { useState } from "react";
+
 function App() {
-  let value = 15;
+  const [value,setValue]=useState(0);
 
   const addValue = () => {
-    value = value + 1;
+    setValue(value+1);
+    if(value>20)
+    {
+      alert("Value is greater than 20");
+      setValue(20);
+      return;
+    }
     console.log("value added "+value);
   }
 
   const subValue = () => {
-    value = value - 1;
+    if(value<0)
+    {
+      alert("Value is less than 0");
+      setValue(0);
+      return;
+    }
+    setValue(value-1);
     console.log("value sub "+value);
   }
   return (
