@@ -11,7 +11,7 @@ const Card = (props) => {
         <div className="p-4">
           <h1 className="text-lg font-semibold">About {props.name}</h1>
           <p className="mt-3 text-sm text-gray-600">
-            {props.about}
+            {props.about} + {props.arr} 
           </p>
           <button
             type="button"

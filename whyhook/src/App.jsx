@@ -25,6 +25,13 @@ function App() {
   //   setValue(value-1);
   //   console.log("value sub "+value);
   // }
+
+  const arr =[1,2,3,4,5,6,7,8,9,10]
+  const obj= {
+    namee:"Suman",
+    age:20,
+    address:"Kathmandu"
+  }
   return (
     <>
       {/* <div className="mainContainer flex text-white flex-col w-80 rounded-md bg-purple-900">
@@ -37,7 +44,7 @@ function App() {
         <button className="btn outline-dotted outline-red-400 text-2xl m-4 rounded-md" onClick={subValue}>Decrease</button>
       </div> */}
       {/* componet card  */}
-      <Card name={"Suman"} about={"suman ko kam xaina hai "}  />
+      <Card name={"Suman"} about={"suman ko kam xaina hai "}  arr={arr}  obj={obj}/>
       <Card name={"Upasana Devkota"} about={"I can't be more beautiful than thissss"} what={"Love me"} />
     </>
   );
