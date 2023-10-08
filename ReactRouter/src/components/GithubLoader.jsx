@@ -22,6 +22,6 @@ export default Github;
 
 // loader use garera aba chai
 export const githubInfo = async () => {
-  const res = await fetch("https://api.github.com/users/iam8uman");
+  const res = await fetch("https://api.github.com/users/yubraja");
   return res.json();
 };
