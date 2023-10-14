@@ -11,6 +11,8 @@ const useFetch = (url) => {
     .then((data)=>setData(data))
 },[url]);
 
+console.log(data)
+
   return [data]
 }
 

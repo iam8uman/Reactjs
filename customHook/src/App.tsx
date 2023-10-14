@@ -1,12 +1,18 @@
 import './App.css'
+// import custom hook 
+import FetchData from './hooks/useFetch'
+
 
 function App() {
+
+  const [data]=FetchData('https://jsonplaceholder.typicode.com/todos')
 
   return (
     <>
       <div className="head">
         <h1>Custom Hook</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellat libero eligendi, sequi facilis nisi harum aliquid molestiae provident rerum voluptate sapiente dolor? Eum tempore voluptas enim quisquam consectetur atque.</p>
+        <p>Datas={data.title}</p>
+       
       </div>
 
 
