@@ -1,13 +1,21 @@
-import React from 'react'
-import UserContext from './UseContext'
+import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
+import UserContext from './UserContext';
 
-const UserContextProvider = (children) => {
-    const [user,setUser]= React.useState(null)
+const UserContextProvider = ({ children }) => { // Correctly destructure the children prop
+  const [user, setUser] = React.useState(null);
+
   return (
-    <UserContext.Provider value={{user,setUser}}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>
-  )
+  );
 }
 
-export default UserContextProvider
+// Add prop type validation
+UserContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+
+export default UserContextProvider;
