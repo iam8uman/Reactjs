@@ -1,44 +1,66 @@
-import PropTypes from 'prop-types';
-
+import PropTypes from "prop-types";
+import { useId } from "react";
 
 function InputBox({
   label,
   amount,
   onAmountChange,
-
-
+  amountDisable = false,
+  currencyDisable = false,
+  currencyOption = [],
+  onCurrencyChange,
+  selectCurrency = "usd",
   className = "",
-}) {
+}) 
+
+{
+const currencyId=useId();
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex  ${className}`}>
       <div className="w-1/2">
-        <label className="text-black/40 mb-2 inline-block">{label}</label>
+        <label htmlFor={currencyId} className="text-black/40 mb-2 inline-block">{label}</label>
         <input
           className="outline-none w-full bg-transparent py-1.5"
           type="number"
           placeholder="Amount"
+          id={currencyId}
           value={amount}
-          onChange={(e)=>onAmountChange || onAmountChange(e.target.value)}
-
+          disabled={amountDisable}
+          onChange={(e) =>
+            onAmountChange || onAmountChange(Number(e.target.value))
+          }
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">
         <p className="text-black/40 mb-2 w-full">Currency Type</p>
-        <select className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none">
-          <option value="usd">usd</option>
+        <select
+          className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
+          value={selectCurrency}
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
+          disabled={currencyDisable}
+        >
+          {currencyOption.map((curr) => (
+            <option key={curr} value={curr}>
+              {curr}
+            </option>
+          ))}
         </select>
       </div>
     </div>
   );
 }
 
-// props validation gareko ho 
+// props validation gareko ho
 InputBox.propTypes = {
-    label: PropTypes.string.isRequired,
-    amount:PropTypes.string.isRequired,
-    onAmountChange:PropTypes.string.isRequired,
-    className:PropTypes.string.isRequired
-
-  }
+  label: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  onAmountChange: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  amountDisable: PropTypes.string.isRequired,
+  currencyDisable: PropTypes.string.isRequired,
+  currencyOption: PropTypes.string.isRequired,
+  onCurrencyChange: PropTypes.string.isRequired,
+  selectCurrency: PropTypes.string.isRequired,
+};
 
 export default InputBox;
