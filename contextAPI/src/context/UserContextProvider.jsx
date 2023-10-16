@@ -7,7 +7,7 @@ const UserContextProvider = ({ children }) => { // Correctly destructure the chi
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      {children}
+      {children} 
     </UserContext.Provider>
   );
 }
@@ -19,3 +19,6 @@ UserContextProvider.propTypes = {
 
 
 export default UserContextProvider;
+
+
+// here children represents login and profile component in App.js 

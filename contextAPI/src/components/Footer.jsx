@@ -1,12 +1,17 @@
-// import React from 'react'
+import { useContext } from 'react';
+import { MyContext } from '../context/Mycontexttt';
 
-const Footer = () => {
+function MyComponent() {
+  const { text, setText } = useContext(MyContext);
+
   return (
     <div>
-        <h2>Ma Footer Ho hai!</h2>
-      
+      <h1>{text}</h1>
+      <button onClick={() => setText('Hello, world!')}>
+        Click me
+      </button>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default MyComponent;

@@ -1,16 +1,10 @@
 import "./App.css";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
-import UserContextProvider from "./context/UserContextProvider";
+import ComA from "./components/ComA";
 
 function App() {
   return (
     <>
-      <UserContextProvider>
-        <Login />
-        <Profile />
-        Hello world
-      </UserContextProvider>
+      <ComA value={"a bata aayeko ma ta"} />
     </>
   );
 }
