@@ -1,16 +1,36 @@
-import "./App.css";
-import ComA from "./components/ComA";
-import Mycontexttt from "./context/Mycontexttt";
+// import "./App.css";
+// import ComA from "./components/ComA";
+// import Mycontexttt from "./context/Mycontexttt";
 
-function App() {
+// function App() {
+//   return (
+//     <>
+//       <Mycontexttt.Provider value={"Upasana Devkota"}>
+//         <ComA />
+//         Hii
+//       </Mycontexttt.Provider>
+//     </>
+//   );
+// }
+
+// export default App;
+
+// import React from 'react'
+import { useState } from "react"
+import ComA from "./components/ComA"
+import Mycontexttt from "./context/Mycontexttt"
+
+const App = () => {
+  const [name,setName]=useState("UPI")
   return (
     <>
-      <Mycontexttt.Provider value={"Upasana Devkota"}>
-        <ComA />
-        Hii
-      </Mycontexttt.Provider>
+    <Mycontexttt.Provider value={{name,setName}}>
+
+      <ComA />
+    </Mycontexttt.Provider>
+      
     </>
-  );
+  )
 }
 
-export default App;
+export default App

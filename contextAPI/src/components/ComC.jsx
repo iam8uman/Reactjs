@@ -3,15 +3,17 @@
 import Mycontexttt from "../context/Mycontexttt";
 
 const ComC = () => {
-  return(
-  <>
-    <Mycontexttt.Consumer>
-      {(valuefromprovider) => {
-        return <div> I love You My Dear {valuefromprovider}</div>;
-      }}
-    </Mycontexttt.Consumer>
-  </>
-  )
+  return (
+    <>
+      <Mycontexttt.Consumer>
+        {({ name, setName }) => {
+          setName("Upasana Devkota❤️");
+          
+          return <div> I love You My Dear {name}</div>;
+        }}
+      </Mycontexttt.Consumer>
+    </>
+  );
 };
 
 export default ComC;
