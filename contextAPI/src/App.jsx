@@ -1,10 +1,14 @@
 import "./App.css";
 import ComA from "./components/ComA";
+import Mycontexttt from "./context/Mycontexttt";
 
 function App() {
   return (
     <>
-      <ComA value={"a bata aayeko ma ta"} />
+      <Mycontexttt.Provider value={"Upasana Devkota"}>
+        <ComA />
+        Hii
+      </Mycontexttt.Provider>
     </>
   );
 }
