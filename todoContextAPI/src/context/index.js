@@ -1,2 +1,2 @@
 // it is used for import export
-export {todoContext,useTodo,TodoProvider} from './TodoContext'
+export {TodoContext,useTodo,TodoProvider} from './TodoContext'
