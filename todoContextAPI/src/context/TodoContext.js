@@ -11,7 +11,7 @@ const TodoContext = React.createContext({
     addTodo:(todo)=>{},
     updateTodo:(id,todo)=>{},
     deleteTodo:(id)=>{},
-    toggoleComplete:(id)=>{}
+    toggleComplete:(id)=>{}
 });
 
 export const useTodo=()=>{
