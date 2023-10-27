@@ -1,3 +1,5 @@
+import Addtodo from "./components/Addtodo"
+import Todos from "./components/Todos"
 
 
 function App() {
@@ -5,6 +7,8 @@ function App() {
   return (
     <>
       <h1>Hello React-redux</h1>
+      <Addtodo />
+      <Todos/>
     </>
   )
 }
